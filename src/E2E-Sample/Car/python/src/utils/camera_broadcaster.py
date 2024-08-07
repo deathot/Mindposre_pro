@@ -20,7 +20,7 @@ class CameraBroadcaster:
 
     def run(self):
         cap = cv2.VideoCapture()
-        cap.open(0, apiPreference=cv2.CAP_V4L2)
+        cap.open(1, apiPreference=cv2.CAP_V4L2)
         cap.set(cv2.CAP_PROP_FOURCC, cv2.VideoWriter_fourcc('M', 'J', 'P', 'G'))
         cap.set(cv2.CAP_PROP_FRAME_WIDTH, self.width)
         cap.set(cv2.CAP_PROP_FRAME_HEIGHT, self.height)
