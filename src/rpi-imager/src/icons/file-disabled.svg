@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="88px" height="88px" viewBox="0 0 88 88" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>1-icon/file-disabled</title>
+    <defs>
+        <path d="M8.53333333,0 L60.2383366,0 C62.4786679,0 64.6291387,0.877003666 66.2254906,2.44167733 L85.4538207,21.2884382 C87.0827479,22.8850408 88,25.0654834 88,27.3410791 L88,56.5056818 C88,61.1969642 84.1794965,65 79.4666667,65 L8.53333333,65 C3.82050347,65 0,61.1969642 0,56.5056818 L0,8.49431818 C0,3.80303579 3.82050347,0 8.53333333,0 Z" id="path-1"></path>
+    </defs>
+    <g id="1-icon/file-disabled" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="矩形备份-12" transform="translate(0.000000, 11.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <use id="蒙版" fill="#DFE5EF" opacity="0.900000036" xlink:href="#path-1"></use>
+            <path d="M64,-2 L89,-2 L89,23 L72.3333333,23 C67.7309604,23 64,19.2690396 64,14.6666667 L64,-2 Z" id="矩形备份-10" fill="#FFFFFF" opacity="0.400000006" mask="url(#mask-2)"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,175 @@
+diff --git a/snowboy/snowboydecoder.py b/snowboy/snowboydecoder.py
+index 8c19570..f58b150 100755
+--- a/snowboy/snowboydecoder.py
++++ b/snowboy/snowboydecoder.py
+@@ -11,6 +11,9 @@ from ctypes import CFUNCTYPE, c_char_p, c_int, cdll
+ from contextlib import contextmanager
+ from robot import constants
+ 
++from snowboy.asr import I2CReadByte, asr_result
++from snowboy.speaker import say_sth, init_speaker
++
+ 
+ logger = logging.getLogger("snowboy")
+ TOP_DIR = os.path.dirname(os.path.abspath(__file__))
+@@ -274,6 +277,11 @@ class HotwordDetector(object):
+             self.detector.NumChannels() * self.detector.SampleRate() * 5
+         )
+ 
++        from snowboy.asr import init_voice_detector
++        self.bus = init_voice_detector()
++        init_speaker(self.bus)
++        say_sth('欢迎使用亚博智能语音播报模块', self.bus)
++
+     def start(
+         self,
+         detected_callback=play_audio_file,
+@@ -321,6 +329,7 @@ class HotwordDetector(object):
+ 
+         with no_alsa_error():
+             self.audio = pyaudio.PyAudio()
++        '''
+         self.stream_in = self.audio.open(
+             input=True,
+             output=False,
+@@ -330,6 +339,7 @@ class HotwordDetector(object):
+             frames_per_buffer=2048,
+             stream_callback=audio_callback,
+         )
++        '''
+ 
+         if interrupt_check():
+             logger.debug("detect voice return")
+@@ -353,60 +363,78 @@ class HotwordDetector(object):
+             if interrupt_check():
+                 logger.debug("detect voice break")
+                 break
+-            data = self.ring_buffer.get()
+-            if len(data) == 0:
+-                time.sleep(sleep_time)
+-                continue
+-
+-            status = self.detector.RunDetection(data)
+-            if status == -1:
+-                logger.warning("Error initializing streams or reading audio data")
+-
+-            # small state machine to handle recording of phrase after keyword
+-            if state == "PASSIVE":
+-                if status > 0:  # key word found
+-
+-                    self.recordedData = []
+-                    self.recordedData.append(data)
+-                    silentCount = 0
+-                    recordingCount = 0
+-                    message = "Keyword " + str(status) + " detected at time: "
+-                    message += time.strftime(
+-                        "%Y-%m-%d %H:%M:%S", time.localtime(time.time())
+-                    )
+-                    logger.info(message)
+-                    callback = detected_callback[status - 1]
+-                    if callback is not None:
+-                        callback()
+-
+-                    if (
+-                        audio_recorder_callback is not None
+-                        and status == 1
+-                        and utils.is_proper_time()
+-                    ):
+-                        state = "ACTIVE"
+-                    continue
+-
+-            elif state == "ACTIVE":
+-                stopRecording = False
+-                if recordingCount > recording_timeout:
+-                    stopRecording = True
+-                elif status == -2:  # silence found
+-                    if silentCount > silent_count_threshold:
+-                        stopRecording = True
+-                    else:
+-                        silentCount = silentCount + 1
+-                elif status == 0:  # voice found
+-                    silentCount = 0
+-
+-                if stopRecording == True:
+-                    fname = self.saveMessage()
+-                    audio_recorder_callback(fname)
+-                    state = "PASSIVE"
+-                    continue
+-
+-                recordingCount = recordingCount + 1
+-                self.recordedData.append(data)
++            # data = self.ring_buffer.get()
++            # if len(data) == 0:
++            #     time.sleep(sleep_time)
++            #     continue
++            # raise
++            signal = I2CReadByte(asr_result, self.bus)
++            # print(signal)
++            if signal != 255:
++                start = time.time()
++                # logger.info(f'Signal received: {signal}')
++                audio_recorder_callback(signal)
++                print(f'Process time for pluggin: {time.time() - start:.2f}')
++
++                start = time.time()
++                if signal == 11:
++                    say_sth('灯光已打开', self.bus)
++                elif signal == 12:
++                    say_sth('灯光已关闭', self.bus)
++                else:
++                    raise ValueError()
++                print(f'Process time for speaker: {time.time() - start:.2f}')
++            time.sleep(0.5)
++
++            # status = self.detector.RunDetection(data)
++            # if status == -1:
++            #     logger.warning("Error initializing streams or reading audio data")
++
++            # # small state machine to handle recording of phrase after keyword
++            # if state == "PASSIVE":
++            #     if status > 0:  # key word found
++
++            #         self.recordedData = []
++            #         self.recordedData.append(data)
++            #         silentCount = 0
++            #         recordingCount = 0
++            #         message = "Keyword " + str(status) + " detected at time: "
++            #         message += time.strftime(
++            #             "%Y-%m-%d %H:%M:%S", time.localtime(time.time())
++            #         )
++            #         logger.info(message)
++            #         callback = detected_callback[status - 1]
++            #         if callback is not None:
++            #             callback()
++
++            #         if (
++            #             audio_recorder_callback is not None
++            #             and status == 1
++            #             and utils.is_proper_time()
++            #         ):
++            #             state = "ACTIVE"
++            #         continue
++
++            # elif state == "ACTIVE":
++            #     stopRecording = False
++            #     if recordingCount > recording_timeout:
++            #         stopRecording = True
++            #     elif status == -2:  # silence found
++            #         if silentCount > silent_count_threshold:
++            #             stopRecording = True
++            #         else:
++            #             silentCount = silentCount + 1
++            #     elif status == 0:  # voice found
++            #         silentCount = 0
++
++            #     if stopRecording == True:
++            #         fname = self.saveMessage()
++            #         audio_recorder_callback(fname)
++            #         state = "PASSIVE"
++            #         continue
++
++            #     recordingCount = recordingCount + 1
++            #     self.recordedData.append(data)
+ 
+         logger.debug("finished.")
+ 

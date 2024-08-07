@@ -1,0 +1,66 @@
+detection:
+  output_path: ./
+  labelme_dataset_path: ./
+  yolo_dataset_yaml_path: ./
+  trans_output: ./
+  train_output: ./
+  class_num: 3
+  split_ratio: 0.1
+  split_test: true
+  weights: yolov5s
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B1
+classification:
+  output_path: null
+  labelme_dataset_path: null
+  class_txt_path: null
+  trans_output: null
+  train_output: null
+  class_num: 4
+  split_ratio: 0.3
+  split_test: true
+  epochs: 5
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B1
+segmentation:
+  output_path: null
+  labelme_dataset_path: null
+  trans_output: null
+  train_output: null
+  split_ratio: 0.3
+  split_test: true
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B1
+keypoint:
+  output_path: null
+  labelme_dataset_path: null
+  yolo_dataset_yaml_path: null
+  trans_output: null
+  train_output: null
+  class_num: null
+  split_ratio: 0.3
+  split_test: true
+  epochs: 100
+  train_batch_size: 12
+  freeze_layers:
+  - 10
+  infer_mode: infer
+  infer_batch_size: 1
+  quantize: false
+  soc: Ascend310B1

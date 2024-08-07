@@ -1,0 +1,9 @@
+torch
+transformers==4.26.1
+sentencepiece==0.1.97
+onnxruntime==1.14.0
+numpy
+flask
+flask-cors
+tqdm
+filelock

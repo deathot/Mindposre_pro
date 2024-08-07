@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>sd卡</title>
+    <g id="sd卡" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="SD卡内存卡">
+            <rect id="Rectangle" x="0" y="0" width="16" height="16"></rect>
+            <path d="M0.695652174,1 C0.695652174,0.45 1.16521739,0 1.73913043,0 L11.9130435,0 C12.0695652,0 12.226087,0.05 12.3304348,0.2 L15.2,3.85 C15.2521739,3.95 15.3043478,4.05 15.3043478,4.15 L15.3043478,15 C15.3043478,15.55 14.8347826,16 14.2608696,16 L1.73913043,16 C1.16521739,16 0.695652174,15.55 0.695652174,15 L0.695652174,1 Z M2.7826087,2 L2.7826087,5 L4.86956522,5 L4.86956522,2 L2.7826087,2 Z M5.91304348,2 L5.91304348,5 L8,5 L8,2 L5.91304348,2 Z M9.04347826,2 L9.04347826,5 L11.1304348,5 L11.1304348,2 L9.04347826,2 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

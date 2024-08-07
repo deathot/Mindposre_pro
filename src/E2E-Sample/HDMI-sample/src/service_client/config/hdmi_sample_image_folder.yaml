@@ -1,0 +1,18 @@
+hdmi_client_node:
+  ros__parameters:
+    # 输入jpg图片文件夹，分辨率为1920x1080
+    image_path: "yuv_img_hdmi_ws/xiaoteng_hdmi_sample/src/service_client/data" 
+    # 模型所在位置
+    model_path: "yuv_img_hdmi_ws/xiaoteng_hdmi_sample/src/service_client/model/garbage_yuv.om" 
+    # 输出图片推理结果的目录
+    output_folder: "yuv_img_hdmi_ws/xiaoteng_hdmi_sample/src/service_client/output" 
+    # hdmi_sample目录的位置
+    hdmi_sample_folder: "Ascend310B-sdk/hdmi_sample" 
+    # 分类结果展示时用的字体的路径
+    font_path: "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf" 
+hdmi_server_node:
+  ros__parameters:
+    # HDMI线插入到小藤中的哪一个HDMI口，"0"或"1"
+    hdmi_device: "0" 
+    # hdmi_sample目录的位置
+    hdmi_sample_folder: "Ascend310B-sdk/hdmi_sample" 

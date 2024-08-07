@@ -1,0 +1,25 @@
+# Init<a name="ZH-CN_TOPIC_0000001589292053"></a>
+
+## 函数功能<a name="section15868409121"></a>
+
+基类NNBaseNode中定义AscendCL推理初始化流程的函数，只做pipeline的串联，具体每个初始化步骤在派生类NNObjectDetectNode中实现.。
+
+## 约束说明<a name="section1771773225914"></a>
+
+无
+
+## 函数原型<a name="section16481811131215"></a>
+
+**Result Init\(\)**
+
+## 参数说明<a name="section2779823101219"></a>
+
+无
+
+## 返回值说明<a name="section7624143271217"></a>
+
+返回Result类型错误码：
+
+-   SUCCESS: 执行成功
+-   FAILED：执行失败
+

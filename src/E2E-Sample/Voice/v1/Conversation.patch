@@ -1,0 +1,90 @@
+diff --git a/robot/Conversation.py b/robot/Conversation.py
+index caa4bb7..ff9a4de 100644
+--- a/robot/Conversation.py
++++ b/robot/Conversation.py
+@@ -110,37 +110,46 @@ class Conversation(object):
+     def getImmersiveMode(self):
+         return self.immersiveMode
+ 
+-    def converse(self, fp, callback=None):
++    def converse(self, detect_signal, callback=None):
+         """核心对话逻辑"""
+-        Player.play(constants.getData("beep_lo.wav"))
+-        logger.info("结束录音")
++        # Player.play(constants.getData("beep_lo.wav"))
++        # logger.info("结束录音")
+         self.isRecording = False
+-        if self.profiling:
+-            logger.info("性能调试已打开")
+-            pr = cProfile.Profile()
+-            pr.enable()
+-            self.doConverse(fp, callback)
+-            pr.disable()
+-            s = io.StringIO()
+-            sortby = "cumulative"
+-            ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
+-            ps.print_stats()
+-            print(s.getvalue())
+-        else:
+-            self.doConverse(fp, callback)
++        self.doConverse(detect_signal, callback)
++
++        # if self.profiling:
++        #     logger.info("性能调试已打开")
++        #     pr = cProfile.Profile()
++        #     pr.enable()
++        #     self.doConverse(fp, callback)
++        #     pr.disable()
++        #     s = io.StringIO()
++        #     sortby = "cumulative"
++        #     ps = pstats.Stats(pr, stream=s).sort_stats(sortby)
++        #     ps.print_stats()
++        #     print(s.getvalue())
++        # else:
++        #     self.doConverse(fp, callback)
+ 
+-    def doConverse(self, fp, callback=None, onSay=None):
++    def doConverse(self, detect_signal, callback=None, onSay=None):
+         self.interrupt()
+-        try:
+-            query = self.asr.transcribe(fp)
+-        except Exception as e:
+-            logger.critical("ASR识别失败：{}".format(e))
+-        utils.check_and_delete(fp)
++        # try:
++        #     query = self.asr.transcribe(fp)
++        # except Exception as e:
++        #     logger.critical("ASR识别失败：{}".format(e))
++        # utils.check_and_delete(fp)
++        if detect_signal == 11:
++            query = '开灯'
++        elif detect_signal == 12:
++            query = '关灯'
++        else:
++            raise ValueError()
++
+         try:
+             self.doResponse(query, callback, onSay)
+         except Exception as e:
+             logger.critical("回复失败：".format(e))
+-        utils.clean()
++        #utils.clean()
+ 
+     def appendHistory(self, t, text, UUID="", plugin=""):
+         """将会话历史加进历史记录"""
+@@ -204,6 +213,7 @@ class Conversation(object):
+         :param onCompleted: 完成的回调
+         :param wait: 是否要等待说完（为True将阻塞主线程直至说完这句话）
+         """
++        """
+         self.appendHistory(1, msg, plugin=plugin)
+         pattern = r"^https?://.+"
+         if re.match(pattern, msg):
+@@ -240,6 +250,7 @@ class Conversation(object):
+         if not cache:
+             utils.check_and_delete(cache_path, 60)  # 60秒后将自动清理不缓存的音频
+         utils.lruCache()  # 清理缓存
++        """
+ 
+     def activeListen(self, silent=False):
+         """主动问一个问题(适用于多轮对话)"""

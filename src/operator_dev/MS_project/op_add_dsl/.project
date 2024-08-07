@@ -1,0 +1,10 @@
+{
+  "type": "Ascend Operator",
+  "project_type": "TBE Operator V2",
+  "project_desc": "",
+  "target": "",
+  "target_id": "",
+  "adk_version": "6.2.1.0.302",
+  "framework": "ONNX",
+  "cann_version": "6.2.RC1"
+}

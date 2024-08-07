@@ -1,0 +1,91 @@
+
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.7.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.19.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.23.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.26.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.42.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.43.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.61.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.63.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.70.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.73.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.76.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.104.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.122.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.151.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.152.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.160.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.179.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.182.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.184.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.189.jpg, infer result: cat
+
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.32.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.38.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.43.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.46.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.50.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.52.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.62.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.69.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.74.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.78.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.87.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.91.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.104.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.105.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.109.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.114.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.117.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.131.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.139.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.193.jpg, infer result: dog
+Execute end. Acc: 0.775
+On Avg, each picture spend: 34.18440696520683ms
+
+
+######## Only Infer ##############
+
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.7.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.19.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.23.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.26.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.42.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.43.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.61.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.63.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.70.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.73.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.76.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.104.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.122.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.151.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.152.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.160.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.179.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.182.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.184.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/cat/cat.189.jpg, infer result: cat
+
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.32.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.38.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.43.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.46.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.50.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.52.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.62.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.69.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.74.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.78.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.87.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.91.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.104.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.105.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.109.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.114.jpg, infer result: cat
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.117.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.131.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.139.jpg, infer result: dog
+image name :/root/ModelAdaptor/cls/edge_infer/data/dog/dog.193.jpg, infer result: dog
+Execute end. Acc: 0.775
+On Avg, each picture spend: 5.409601407173352ms

@@ -1,0 +1,24 @@
+DEEPSORT:
+  REID_CKPT: "deep_sort/deep_sort/deep/checkpoint/ckpt.t7"
+
+  # NearestNeighborDistanceMetric参数值
+  MAX_DIST: 0.2
+
+  # 过滤检测bbox框的分数值
+  MIN_CONFIDENCE: 0.3
+
+  # 非最大值抑制中的参数
+  NMS_MAX_OVERLAP: 0.5
+
+  # NearestNeighborDistanceMetric(“cosine”, max_cosine_distance, nn_budget)参数值
+  MAX_IOU_DISTANCE: 0.7
+
+  # 最大生存时间
+  MAX_AGE: 70
+
+  # 连续几帧检测到才创建对象
+  N_INIT: 3
+
+  # NearestNeighborDistanceMetric参数值
+  NN_BUDGET: 100
+  

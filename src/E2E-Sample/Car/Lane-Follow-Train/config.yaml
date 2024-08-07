@@ -1,0 +1,17 @@
+common:
+  dataset_path: ./dataset
+  output_dir: ./output
+  width: 320
+  height: 180
+
+train:
+  resume: False
+  # "device" can be "cpu" or "cuda:0", "cuda:1", etc. When "cuda:0" is used, the first GPU is used.
+  device: cpu
+  epoch_num: 30
+  batch_size: 64
+  lr: 0.001
+
+export:
+  to_onnx: True
+  onnx_model_name: lfnet.onnx

@@ -1,0 +1,50 @@
+#ifndef DRIVEBACKUP_H
+#define DRIVEBACKUP_H
+
+/**
+ * Copyright 2022 Huawei Technologies Co., Ltd
+
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+
+ * http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+*/
+
+#include "downloadthread.h"
+
+class DriveBackupThread : public DownloadThread
+{
+    Q_OBJECT
+public:
+    explicit DriveBackupThread(const QByteArray &backupPath, const QByteArray &device, bool isCompressed, QObject *parent = nullptr);
+    virtual ~DriveBackupThread();
+    virtual void run();
+
+private:
+    void _readbackRun();
+    void _compressAndreadbackRun();
+    bool _openAndPrepareDevice();
+    bool _openAndPrepareBackupFile();
+    bool _openAndPrepareBackupCompressedFile();
+    void _onError(const QString &msg);
+    void _destroyResources();
+    bool _checkFreeSpace(const QString &backupPath);
+
+private:
+    char* _readFileBuf{nullptr};
+    uint64_t _deviceSize;
+    bool _readbackCompression;
+    std::vector<std::shared_ptr<WinFile>> _volumeFileVec;
+    struct archive *_archive{nullptr};
+    struct archive_entry *_entry{nullptr};
+    QString _compressedPath;
+};
+
+#endif // DRIVEBACKUP_H

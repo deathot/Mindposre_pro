@@ -1,0 +1,34 @@
+{
+  "source": {
+    "url": {
+      "miniconda": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/Miniconda3-py39_23.1.0-1-Linux-aarch64.sh",
+      "cann": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/CANN/CANN%207.0.RC1/Ascend-cann-toolkit_7.0.RC1_linux-aarch64.run",
+      "mxvision": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/MindX/MindX%205.0.RC3/Ascend-mindxsdk-mxvision_5.0.RC3_linux-aarch64.run",
+      "acl-runtime": "https://aisbench.obs.myhuaweicloud.com/packet/ais_bench_infer/0.0.2/aclruntime-0.0.2-cp39-cp39-linux_aarch64.whl",
+      "ais_bench": "https://aisbench.obs.myhuaweicloud.com/packet/ais_bench_infer/0.0.2/ais_bench-0.0.2-py3-none-any.whl",
+      "audio": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/images/resources/audio.zip",
+      "graphic": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/images/resources/graphic.zip",
+      "wifi": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/images/resources/wifi.zip"
+    }
+  },
+  "function": {
+    "pre_process": "y",
+    "apt_install": "y",
+    "install_miniconda": "y",
+    "python_pip_install": "y",
+    "install_cann": "y",
+    "install_mxvision": "y",
+    "install_acllite": "y",
+    "add_audio": "y",
+    "add_local_desktop": "y",
+    "add_remote_desktop": "y",
+    "add_wifi": "y",
+    "post_process": "y"
+  },
+  "conda": {
+    "source": "channels:\n - defaults\n show_channel_urls: true\n default_channels:\n - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main\n - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/r\n - https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/msys2\n custom_channels:\n conda-forge: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n msys2: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n bioconda: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n menpo: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n pytorch: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n pytorch-lts: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud\n simpleitk: https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud"
+  },
+  "python": {
+    "source": "[global]\n index-url = https://pypi.tuna.tsinghua.edu.cn/simple\n [install]\n trusted-host = https://pypi.tuna.tsinghua.edu.cn"
+  }
+}

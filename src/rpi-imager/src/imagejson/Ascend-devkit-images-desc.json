@@ -1,0 +1,54 @@
+{
+    "imager": {
+        "latest_version": "1.1.6",
+        "feed_back_url": "https://www.hiascend.com/feedback/add",
+        "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/tools/23.0.RC1/1.1.6/Ascend-devkit-imager-update_1.1.6_win-x86_64.exe"
+    },
+    "os_list": [
+        { 
+            "name": "Atlas 200I DK A2",
+            "description": "Atlas 200I DK A2镜像",
+            "icon": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/static/Atlas200IDKA2.png",
+            "subitems": [
+                {
+                    "name": "Base-Image_23.0.RC1_ubuntu22.04",
+                    "description": "镜像包含OS、NPU驱动固件、CANN、MindX SDK和预置典型样例(10个jupyter notebook入门样例和模型适配工具配套模型的推理样例),帮助开发者开箱即用,快速上手",
+                    "firmwareanddriverversions": "23.0.RC1.B080",
+                    "icon": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/static/Atlas200IDKA2.png",
+                    "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/DevKit/images/23.0.RC1/1.1.0/A200I-DK-A2_base-image_1.1.0_ubuntu22.04-aarch64.img.zip",
+                    "extract_size": 14674825728,
+                    "extract_sha256": "f2b6f74d47a379c7d08ea974e74abae225fb034c370b9777d00d23b7fb356b44",
+                    "image_download_size": 5736981033,
+                    "release_date": "2023-03-24",
+                    "init_format": "systemd",
+                    "cannversion": "6.2.RC1.B080",
+                    "is_extensible": false,
+                    "dk_version": "Atlas 200I DK A2",
+                    "os_version": "Ubuntu 22.04 LTS Arm64"
+                }
+            ]
+        },{ 
+            "name": "Atlas 200 DK",
+            "description": "Atlas 200 DK镜像",
+            "icon": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200%20DK/DevKit/static/Atlas200DK.png",
+            "subitems": [
+                {
+                    "name": "Base-Image_23.0.RC1_ubuntu18.04",
+                    "description": "Atlas 200DK镜像,预装Python、CANN、MindX SDK、SSH、SAMBA、VNC、XRDP、XFCE、MQTT Broke、OpenCV、PCL、PIL以及相关的Sample样例。",
+                    "firmwareanddriverversions": "1.0.13.alpha",
+                    "icon": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200%20DK/DevKit/static/Atlas200DK.png",
+                    "url": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200%20DK/DevKit/images/23.0.RC1/1.0.6/A200dk_cv-image_1.0.6_ubuntu18.04-aarch64-minirc.img.zip",
+                    "extract_size": 22573744128,
+                    "extract_sha256": "821149bf52afefe0e13e1d5a4b7a90f31152635ac245ee91ae2b63760824393d",
+                    "image_download_size": 9329002390,
+                    "release_date": "2022-11-28",
+                    "init_format": "systemd",
+                    "cannversion": "5.1.RC2.alpha007",
+                    "is_extensible": true,
+                    "dk_version": "Atlas 200 DK",
+                    "os_version": "Ubuntu 18.04 LTS Arm64"
+                }
+            ]
+        }
+    ]
+}

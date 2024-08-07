@@ -1,0 +1,18 @@
+{
+  "source": {
+    "url": {
+      "base_image": "https://repo.openeuler.org/openEuler-22.03-LTS/ISO/aarch64/openEuler-22.03-LTS-aarch64-dvd.iso",
+      "npu": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/ToTest/23.0.RC2/Components/Ascend-hdk-310b-npu-driver-soc_23.0.rc2_linux-aarch64.run",
+      "hdk": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Atlas%20200I%20DK%20A2/ToTest/23.0.RC2/Components/Ascend-hdk-310b-sdk-soc_23.0.rc2.zip",
+      "file_system": "https://ascend-repo.obs.cn-east-2.myhuaweicloud.com/Ascend%20HDK%2023.0.T10/Ascend-hdk-310b-npu-sample-root-filesystem-soc_23.0.rc1_linux-aarch64.zip"
+    }
+  },
+  "function": {
+    "get_base_image": "y",
+    "get_npu_driver": "y",
+    "get_hdk": "y",
+    "get_file_system": "y",
+    "write_to_device": "y",
+    "post_process": "y"
+  }
+}

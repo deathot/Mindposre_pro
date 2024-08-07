@@ -1,0 +1,5 @@
+onnxruntime==1.14.0
+torch
+transformers==4.26.1
+sentencepiece==0.1.97
+onnxsim==0.4.17

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500.54 147.27">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 60px;
+        fill: red;
+        stroke: #754c24;
+        stroke-miterlimit: 10;
+        font-family: SimHei;
+      }
+    </style>
+  </defs>
+  <g id="图层_2" data-name="图层 2">
+    <g id="图层_1-2" data-name="图层 1">
+      <text class="cls-1" transform="translate(40.27 52.06)">
+        <tspan x="30" dy="72">昇腾开发者套件</tspan>
+        <tspan x="30" dy="72">模型适配工具</tspan>
+      </text>
+    </g>
+  </g>
+</svg>

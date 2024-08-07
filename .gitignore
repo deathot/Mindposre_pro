@@ -1,0 +1,11 @@
+build-src-Desktop_Qt_5_15_2_MinGW_32_bit-Debug
+build-src-Desktop_Qt_5_15_2_MinGW_32_bit-Release
+/src/models_adaption/__init__.py
+.idea
+**/__pycache__
+src/labelme/labelme/version.json
+/version.json
+/main.bat
+/__main__.py
+src/models_adaption/segmentation/unetplusplus/train/nested_unet.pth
+src/labelme/labelme/uicommponet/image_rc.py
